@@ -1,0 +1,54 @@
+:root {
+  --bg: white;
+  --fg: black;
+  --select-bg: cornflowerblue;
+  --select-text: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: --apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+  padding: 0.5rem;
+}
+
+.h {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.015rem;
+}
+
+.zz--strip {
+  width: 100%;
+  display: flex;
+}
+
+.zz--strip span {
+  padding: 0.1rem;
+  flex: 1 1 auto;
+  text-align: center;
+}
+.zz--strip span:nth-child(1),
+.zz--strip span:nth-child(3) {
+  background-color: var(--select-bg);
+  color: var(--select-text);
+  flex: 0 0 6rem;
+}
+.zz--strip span:nth-child(1) {
+  text-align: left;
+}
+.zz--strip span:nth-child(3) {
+  text-align: right;
+}
