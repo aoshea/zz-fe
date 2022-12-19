@@ -15,18 +15,19 @@ interface Vec2D {
 }
 
 function getPolygonPoints(n: number, radius: number, centre: Vec2D): string {
-  const angle_in_radians = Math.PI / n;
+  const angle_in_radians = (Math.PI * 2) / n;
   let current_angle = 0;
 
   const points = [];
   for (let i = 0; i < n; ++i) {
     points.push({
-      x: Math.floor(centre.x + Math.cos(current_angle) * radius),
-      y: Math.floor(centre.y + Math.sin(current_angle) * radius),
+      x: centre.x + Math.cos(current_angle) * radius,
+      y: centre.y + Math.sin(current_angle) * radius,
     });
     current_angle += angle_in_radians;
   }
 
+  console.log(points);
   return points.map((p) => `${p.x},${p.y}`).join(' ');
 }
 
@@ -34,7 +35,6 @@ function createSVGPolygon(): SVGPolygonElement {
   const polygon = document.createElementNS(SVG_NS, 'polygon');
   polygon.setAttribute('points', getPolygonPoints(7, 10, { x: 50, y: 50 }));
   polygon.setAttribute('fill', 'red');
-  polygon.setAttribute('stroke', 'blue');
   return polygon;
 }
 
