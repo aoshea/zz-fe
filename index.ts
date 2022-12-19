@@ -34,7 +34,8 @@ function getPolygonPoints(n: number, radius: number, centre: Vec2D): string {
 function createSVGPolygon(): SVGPolygonElement {
   const polygon = document.createElementNS(SVG_NS, 'polygon');
   polygon.setAttribute('points', getPolygonPoints(7, 10, { x: 50, y: 50 }));
-  polygon.setAttribute('fill', 'red');
+  polygon.setAttribute('fill', 'cornflowerblue');
+  polygon.setAttribute('class', 'enter');
   return polygon;
 }
 
