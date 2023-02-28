@@ -3,6 +3,16 @@
   --fg: black;
   --select-bg: cornflowerblue;
   --select-text: white;
+  --bg-alt: orange;
+  --serif: Georgia, 'Times New Roman', Times, serif;
+  --sans-serif: --apple-system, sans-serif;
+}
+
+html,
+main,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,26 +23,45 @@ body {
   color: var(--fg);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: ;
 }
 
-main {
-  padding: 0.5rem;
-}
-
-.h {
+.zz--heading {
   font-weight: 700;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.015rem;
 }
 
+.zz--title {
+  font-family: var(--serif);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin-right: -0.25rem;
+}
+
 .zz--strip {
   width: 100%;
   display: flex;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background-color: var(--bg-alt);
+}
+
+header.zz--strip {
+  border-bottom: 4px solid var(--fg);
+}
+
+footer.zz--strip {
+  border-top: 4px solid var(--fg);
 }
 
 .zz--strip span {
@@ -40,12 +69,19 @@ main {
   flex: 1 1 auto;
   text-align: center;
 }
+
 .zz--strip span:nth-child(1),
 .zz--strip span:nth-child(3) {
-  background-color: var(--select-bg);
-  color: var(--select-text);
+  background-color: transparent;
+  color: var(--fg);
   flex: 0 0 6rem;
 }
+
+.zz--strip span:nth-child(2) {
+  display: inline-block;
+  background-color: orange;
+}
+
 .zz--strip span:nth-child(1) {
   text-align: left;
 }
