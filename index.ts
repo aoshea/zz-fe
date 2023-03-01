@@ -40,4 +40,4 @@ function createSVGPolygon(): SVGPolygonElement {
 }
 
 const polygon = createSVGPolygon();
-artboard.appendChild(polygon);
+// artboard.appendChild(polygon);

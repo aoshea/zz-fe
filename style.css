@@ -6,6 +6,7 @@
   --bg-alt: orange;
   --serif: Georgia, 'Times New Roman', Times, serif;
   --sans-serif: --apple-system, sans-serif;
+  --border-width: 2px;
 }
 
 html,
@@ -41,11 +42,24 @@ h3 {
 }
 
 .zz--title {
+  position: relative;
   font-family: var(--serif);
-  font-size: 24px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   margin-right: -0.25rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.zz--title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -4px;
+  height: var(--border-width);
+  background-color: black;
 }
 
 .zz--strip {
@@ -57,11 +71,11 @@ h3 {
 }
 
 header.zz--strip {
-  border-bottom: 4px solid var(--fg);
+  border-bottom: var(--border-width) solid var(--fg);
 }
 
 footer.zz--strip {
-  border-top: 4px solid var(--fg);
+  border-top: var(--border-width) solid var(--fg);
 }
 
 .zz--strip span {
@@ -87,6 +101,23 @@ footer.zz--strip {
 }
 .zz--strip span:nth-child(3) {
   text-align: right;
+}
+
+/* svg */
+.zz--cell-row rect {
+  fill: transparent;
+}
+.zz--cell-row:nth-child(even) rect:nth-child(even) {
+  stroke: turquoise;
+}
+.zz--cell-row:nth-child(odd) rect:nth-child(odd) {
+  stroke: turquoise;
+}
+
+svg rect ~ text {
+  font-size: 10px;
+  font-family: var(--sans-serif);
+  font-style: bold;
 }
 
 @keyframes enterer {

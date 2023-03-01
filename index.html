@@ -1,13 +1,34 @@
 <main>
   <header class="zz--strip zz--heading">
     <span>1/2/22</span>
-    <span class="zz--title">words</span>
+    <span class="zz--title">Ziggawords</span>
     <span>12</span>
   </header>
   <section>
     <div id="app"></div>
     <svg xmlns="http://www.w3.org/2000/svg" id="artboard" viewBox="0 0 100 100">
-      <polygon points="0,10 10,10 20,50" />
+      <g class="zz--cell-row" transform="translate(20 10)">
+        <rect x="0" y="0" width="12" height="12"></rect>
+        <rect x="12" y="0" width="12" height="12"></rect>
+        <rect x="24" y="0" width="12" height="12"></rect>
+        <rect x="36" y="0" width="12" height="12"></rect>
+        <rect x="48" y="0" width="12" height="12"></rect>
+        <text x="2.4" y="9.6">X</text>
+      </g>
+      <g class="zz--cell-row" transform="translate(20 22)">
+        <rect x="0" y="0" width="12" height="12"></rect>
+        <rect x="12" y="0" width="12" height="12"></rect>
+        <rect x="24" y="0" width="12" height="12"></rect>
+        <rect x="36" y="0" width="12" height="12"></rect>
+        <rect x="48" y="0" width="12" height="12"></rect>
+      </g>
+      <g class="zz--cell-row" transform="translate(20 34)">
+        <rect x="0" y="0" width="12" height="12"></rect>
+        <rect x="12" y="0" width="12" height="12"></rect>
+        <rect x="24" y="0" width="12" height="12"></rect>
+        <rect x="36" y="0" width="12" height="12"></rect>
+        <rect x="48" y="0" width="12" height="12"></rect>
+      </g>
       <g transform="translate(95, 45)">
         <text
           x="0"
@@ -21,6 +42,14 @@
         </text>
       </g>
     </svg>
+    <div class="zz--display">
+      <input type="text" value="TEST" />
+    </div>
+    <footer class="zz--controls">
+      <button type="button">X</button>
+      <button type="button">ENTER</button>
+      <button type="button">R</button>
+    </footer>
   </section>
   <footer class="zz--strip zz--heading">
     <span>info</span>
